@@ -1,27 +1,27 @@
-#Oh my food
+# Oh my food
 
-###Polices
+### Polices
 * __logo et titres__ : Shrikhand
 * __Texte__ : Roboto
 
-###Couleurs
+### Couleurs
 * __primaire__ : #9356DC;
 * __secondaire__ : #FF79DA;
 * __tertiaire__ : #99E2D0;
 
-##Technologies
+## Technologies
 * PAS DE JS
 * QUE DU CSS
 * PAS DE FRAMEWORK
 *  UTILISER SASS
 
-##Compatibilité
+## Compatibilité
 * Mobile first
 * Tablette et Desktop : libre mais responsive
 * Validation W3C html et css
 * Compatible Chrome et Firefox
 
-#Livrables attendus
+# Livrables attendus
 __Header__
 * Présent sur toutes les pages
 * Page d'accueil : logo du site
@@ -40,7 +40,7 @@ __Footer__
 * Click sur "contact" => envoie vers une adresse mail
 
 
-##Effets graphiques et animations
+## Effets graphiques et animations
 __Boutons__ 
 * Survol : background doit s'éclaircir, ombre + visible
 * Bouton like : hover sur desktop => coeur se rempli progressivement
