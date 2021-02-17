@@ -47,9 +47,9 @@ __Boutons__
 
 __Page d'accueil__ 
 * "loading spinner" :
-`* doit apparaitre 1 à 3 secondes quand on arrive sur la page d'accueil,
-`* couvrir l'intégralité de l'écran
-`* peut être reprendre les couleurs du dégradé
+`* doit apparaitre 1 à 3 secondes quand on arrive sur la page d'accueil,`
+`* couvrir l'intégralité de l'écran`
+`* peut être reprendre les couleurs du dégradé`
 
 __Pages de menu__
 * Effet d'affichage du menu un par un (voir l'animation fournie)
