@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninaly0/NaLY_3_28012021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninaly0/NaLY_3_28012021/issues"
+  },
+  "homepage": "https://github.com/ninaly0/NaLY_3_28012021#readme",
+  "dependencies": {
+    "sass": "^1.32.7"
+  }
+}
