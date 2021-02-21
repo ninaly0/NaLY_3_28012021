@@ -8,8 +8,8 @@
 }
 
 /* Remove default padding */
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
@@ -52,6 +52,9 @@ ul li {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+a {
+  text-decoration: none;
 }
 
 /* Make images easier to work with */
