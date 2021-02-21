@@ -1,0 +1,16 @@
+@mixin buttons {
+    border-radius: 25px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    cursor:pointer;
+}
+
+@mixin font-icon($content, $font-family: $font-icon, $font-bold: $font-bold) {
+    content: $content;
+    font-family: $font-icon;
+    font-weight: $font-bold;
+    margin-right: 15px;
+}

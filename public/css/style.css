@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**** RESET CSS ****/
 /* Box sizing rules */
 *,
@@ -114,6 +115,51 @@ header a {
 header a > img {
   width: 200px;
   height: 30px;
+}
+
+.container {
+  padding: 50px 20px;
+}
+
+.search-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #eaeaea;
+}
+.search-location::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 15px;
+}
+.search-location input {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+}
+
+.introduction {
+  padding: 40px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.introduction h1 {
+  margin-bottom: 20px;
+}
+.introduction p {
+  margin-bottom: 25px;
+  color: #656565;
+}
+.introduction button {
+  border-radius: 25px;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
