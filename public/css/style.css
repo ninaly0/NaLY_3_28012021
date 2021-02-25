@@ -92,7 +92,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 900;
 }
 
@@ -160,6 +161,105 @@ header a > img {
   padding: 15px 20px;
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   cursor: pointer;
+}
+
+.steps ul li {
+  position: relative;
+  padding: 25px;
+  margin: 0 0 25px 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 11px 20px -15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 11px 20px -15px rgba(0, 0, 0, 0.3);
+}
+.steps ul li:first-child::before {
+  content: "1";
+  position: absolute;
+  top: 30%;
+  left: -15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  text-align: center;
+  color: #FFFFFF;
+}
+.steps ul li:nth-child(2)::before {
+  content: "2";
+  position: absolute;
+  top: 30%;
+  left: -15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  text-align: center;
+  color: #FFFFFF;
+}
+.steps ul li:nth-child(3)::before {
+  content: "3";
+  position: absolute;
+  top: 30%;
+  left: -15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  text-align: center;
+  color: #FFFFFF;
+}
+.steps ul li .choose-restaurant::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 15px;
+  color: #7e7e7e;
+}
+.steps ul li .compose-menu::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 15px;
+  color: #7e7e7e;
+}
+.steps ul li .eat-restaurant::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 15px;
+  color: #7e7e7e;
+}
+
+.restaurant-cards {
+  background-color: #f6f6f6;
+}
+.restaurant-cards ul li {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 11px 20px -15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 11px 20px -15px rgba(0, 0, 0, 0.3);
+}
+.restaurant-cards ul li img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  object-position: bottom;
+}
+.restaurant-cards ul li:nth-child(2) img {
+  object-position: 0 -150px;
+}
+.restaurant-cards ul li .card-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px 20px 15px;
+}
+.restaurant-cards ul li .card-infos p {
+  color: #656565;
+}
+.restaurant-cards ul li .card-infos i {
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

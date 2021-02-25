@@ -31,6 +31,7 @@ __Page d'accueil__
 * Afficher la localisation, mettre un input
 * Courte présentation de l'entreprise
 * Cartes menu : au click (a), ça nous mène sur la page de menu afférent
+* Bouton like doit se remplir progressivement au hover en DESKTOP.
 
 __Pages de menu__
 * Menu des restaus

@@ -14,3 +14,16 @@
     font-weight: $font-bold;
     margin-right: 15px;
 }
+
+@mixin steps($content) {
+    content: $content;
+    position:absolute;
+    top: 30%;
+    left: -15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    text-align: center;
+    color: #FFFFFF;
+}
