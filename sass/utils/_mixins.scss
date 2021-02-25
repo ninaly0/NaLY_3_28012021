@@ -1,6 +1,6 @@
 @mixin buttons {
     border-radius: 25px;
-    color: #FFFFFF;
+    color: $color-white;
     border: none;
     outline: none;
     padding: 15px 20px;
@@ -25,5 +25,16 @@
     border-radius: 50%;
     background-color: $color-primary;
     text-align: center;
-    color: #FFFFFF;
+    color: $color-white;
+}
+
+@mixin tags {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 15px;
+    background-color: $color-third;
+    border-radius: 3px;
+    color: #37806e;
+    font-weight: $font-bold;
 }

@@ -118,6 +118,33 @@ header a > img {
   height: 30px;
 }
 
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+}
+footer ul li {
+  margin-top: 5px;
+}
+footer ul li:first-child::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 15px;
+  margin-right: 21px;
+}
+footer ul li:nth-child(2)::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 15px;
+}
+footer ul li a {
+  color: #FFFFFF;
+}
+
 .container {
   padding: 50px 20px;
 }
@@ -233,6 +260,7 @@ header a > img {
   background-color: #f6f6f6;
 }
 .restaurant-cards ul li {
+  position: relative;
   margin-bottom: 20px;
   border-radius: 15px;
   background-color: #FFFFFF;
@@ -260,6 +288,16 @@ header a > img {
 }
 .restaurant-cards ul li .card-infos i {
   font-size: 30px;
+}
+.restaurant-cards ul li .new-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 15px;
+  background-color: #99E2D0;
+  border-radius: 3px;
+  color: #37806e;
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=style.css.map */

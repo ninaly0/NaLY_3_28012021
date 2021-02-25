@@ -1,0 +1,26 @@
+footer {
+  background-color: #353535;
+  color: $color-white;
+
+  h2 {
+      font-family: $title-font;
+  }
+
+  ul li {
+    margin-top: 5px;
+    &:first-child {
+      &::before {
+        @include font-icon("\f2e7");
+        margin-right: 21px;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        @include font-icon("\f4c4");
+      }
+    }
+    a {
+      color: $color-white
+    }
+  }
+}
