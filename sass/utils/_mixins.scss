@@ -1,31 +1,42 @@
 @mixin buttons {
-    border-radius: 25px;
-    color: $color-white;
-    border: none;
-    outline: none;
-    padding: 15px 20px;
-    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-    cursor:pointer;
+  display: block;
+  margin: auto;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: $color-white;
+  font-weight: $font-bold;
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+  -webkit-box-shadow: 0px 11px 20px -10px rgba(0,0,0,0.3); 
+  box-shadow: 0px 11px 20px -10px rgba(0,0,0,0.3);
+  cursor:pointer;
+
+  &:hover {
+    -webkit-box-shadow: 0px 6px 15px -5px rgba(0,0,0,0.6); 
+    box-shadow: 0px 6px 15px -5px rgba(0,0,0,0.6);
+    transition: .2s;
+  }
 }
 
 @mixin font-icon($content, $font-family: $font-icon, $font-bold: $font-bold) {
-    content: $content;
-    font-family: $font-icon;
-    font-weight: $font-bold;
-    margin-right: 15px;
+  content: $content;
+  font-family: $font-icon;
+  font-weight: $font-bold;
+  margin-right: 15px;
 }
 
 @mixin steps($content) {
-    content: $content;
-    position:absolute;
-    top: 30%;
-    left: -15px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: $color-primary;
-    text-align: center;
-    color: $color-white;
+  content: $content;
+  position:absolute;
+  top: 30%;
+  left: -15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $color-primary;
+  text-align: center;
+  color: $color-white;
 }
 
 @mixin tags {

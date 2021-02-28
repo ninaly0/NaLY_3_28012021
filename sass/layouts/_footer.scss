@@ -1,4 +1,4 @@
-footer {
+footer{
   background-color: #353535;
   color: $color-white;
 
@@ -11,12 +11,13 @@ footer {
     &:first-child {
       &::before {
         @include font-icon("\f2e7");
-        margin-right: 21px;
+        font-size: 14px;
       }
     }
     &:nth-child(2) {
       &::before {
         @include font-icon("\f4c4");
+        font-size: 10px;
       }
     }
     a {
