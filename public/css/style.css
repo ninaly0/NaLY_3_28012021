@@ -104,25 +104,27 @@ a {
 
 header {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
   -webkit-box-shadow: 0px -5px 20px 4px rgba(0, 0, 0, 0.15);
   box-shadow: 0px -5px 20px 4px rgba(0, 0, 0, 0.15);
 }
 header .return-btn {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 50px;
-  height: 65px;
+  height: 70px;
   font-size: 18px;
 }
-header a {
-  width: 100%;
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header .return-btn i {
+  margin-left: 20px;
 }
-header a > img {
+header img {
   width: 200px;
   height: 30px;
 }
@@ -385,6 +387,12 @@ footer ul li a {
   margin-bottom: 30px;
 }
 
+.menu-img {
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+}
+
 .menu {
   position: relative;
   top: -45px;
@@ -400,7 +408,7 @@ footer ul li a {
 }
 .menu .menu-header h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 28px;
+  font-size: 25px;
 }
 .menu .menu-header i {
   font-size: 30px;
