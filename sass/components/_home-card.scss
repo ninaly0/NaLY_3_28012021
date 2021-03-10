@@ -31,12 +31,85 @@
           color: #656565;
       }
       i {
-          font-size: 30px;
+        font-size: 30px;
+
+        // &.is-active:active {
+        //   display: none;
+        // }
       }
     }
 
     .new-tag {
       @include tags;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .restaurant-cards {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  
+      li {
+        display: block;
+        width: calc(50% - 40px / 2);
+        height: 400px;
+
+        figure {
+          height: 250px;
+          img {
+            height: 100%;
+
+            &:nth-child(2) img {
+              object-position: 0;
+            }
+          }
+        }
+        .card-infos {
+          .like {
+            position: relative;
+    
+            i {
+              position: absolute;
+              top: -15px;
+              right: 10px;
+              font-size: 30px;
+
+              &.is-active {
+                &:hover {
+                  font-weight: bold;
+                  background: linear-gradient(to bottom, #9356DC 0%,#FF79DA 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color:transparent;
+                }
+              }
+            }
+          }
+        }
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .restaurant-cards {
+    ul li {
+      figure {
+        height: 280px;
+
+        img {
+          height: 100%;
+        }
+      }
     }
   }
 }

@@ -44,6 +44,7 @@
     border-radius: 15px;
     -webkit-box-shadow: 0px 11px 20px -15px rgba(0,0,0,0.3); 
     box-shadow: 0px 11px 20px -15px rgba(0,0,0,0.3);
+    background-color: #f6f6f6;
 
     &:first-child {
       &::before {
@@ -80,3 +81,29 @@
     }
   }
 }
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 70%;
+    margin: auto;
+  }
+  .steps {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        flex: none;
+        margin-right: 30px;
+
+        a {
+          font-size: 20px
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
