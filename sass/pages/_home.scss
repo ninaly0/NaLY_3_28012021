@@ -93,11 +93,17 @@
       flex-wrap: wrap;
 
       li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex: none;
         margin-right: 30px;
+        padding: 10px;
+        height: 60px;
+        width: 270px;
 
         a {
-          font-size: 20px
+          font-size: 18px
         }
       }
     }
