@@ -50,3 +50,16 @@
     color: #37806e;
     font-weight: $font-bold;
 }
+
+@mixin like {
+  &:hover {
+    font-weight: bold;
+    background: linear-gradient(to bottom, #9356DC 0%,#FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    animation: fadeIn .5s linear;
+    animation-fill-mode: both;
+  }   
+}

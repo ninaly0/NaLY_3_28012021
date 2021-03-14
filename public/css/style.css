@@ -35,7 +35,6 @@ dd {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
@@ -50,10 +49,6 @@ ul li {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
 a {
   text-decoration: none;
 }
@@ -356,6 +351,34 @@ footer ul li a {
   font-weight: 700;
 }
 
+.card-infos .like {
+  position: relative;
+}
+.card-infos .like i {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  font-size: 30px;
+}
+.card-infos .like i.is-active:hover {
+  font-weight: bold;
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
+}
+
+@media only screen and (min-width: 768px) {
+  .restaurant-cards ul li figure {
+    height: 280px;
+  }
+  .restaurant-cards ul li figure img {
+    height: 100%;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .restaurant-cards ul {
     display: flex;
@@ -365,7 +388,7 @@ footer ul li a {
   .restaurant-cards ul li {
     display: block;
     width: calc(50% - 40px / 2);
-    height: 400px;
+    height: 350px;
   }
   .restaurant-cards ul li figure {
     height: 250px;
@@ -376,23 +399,6 @@ footer ul li a {
   .restaurant-cards ul li figure img:nth-child(2) img {
     object-position: 0;
   }
-  .restaurant-cards ul li .card-infos .like {
-    position: relative;
-  }
-  .restaurant-cards ul li .card-infos .like i {
-    position: absolute;
-    top: -15px;
-    right: 10px;
-    font-size: 30px;
-  }
-  .restaurant-cards ul li .card-infos .like i.is-active:hover {
-    font-weight: bold;
-    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
   .restaurant-cards ul li h3 {
     font-size: 24px;
   }
@@ -400,37 +406,14 @@ footer ul li a {
     font-size: 20px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .restaurant-cards ul li figure {
-    height: 280px;
-  }
-  .restaurant-cards ul li figure img {
-    height: 100%;
-  }
-}
-.menu .menu-entree,
-.menu .menu-dishes,
-.menu .menu-dessert {
+.menu .menu-items {
   margin-top: 30px;
 }
-.menu .menu-entree h2,
-.menu .menu-dishes h2,
-.menu .menu-dessert h2 {
-  color: #656565;
-  font-weight: 500;
-  font-size: 16px;
+.menu .menu-items ul li {
+  animation: fadeIn 1s linear;
+  animation-fill-mode: both;
 }
-.menu .menu-entree .separator,
-.menu .menu-dishes .separator,
-.menu .menu-dessert .separator {
-  width: 40px;
-  height: 3px;
-  margin-bottom: 15px;
-  background-color: #99E2D0;
-}
-.menu .menu-entree ul li,
-.menu .menu-dishes ul li,
-.menu .menu-dessert ul li {
+.menu .menu-items ul li:not(.menu-items-title) {
   display: flex;
   flex: none;
   justify-content: space-between;
@@ -440,32 +423,36 @@ footer ul li a {
   -webkit-box-shadow: 0px 11px 20px -15px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 11px 20px -15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  animation: fadeIn 1s linear;
-  animation-fill-mode: both;
 }
-.menu .menu-entree ul li div.menu-entree-infos,
-.menu .menu-dishes ul li div.menu-entree-infos,
-.menu .menu-dessert ul li div.menu-entree-infos {
+.menu .menu-items ul li.menu-items-title {
+  margin-top: 40px;
+}
+.menu .menu-items ul li.menu-items-title h2 {
+  color: #656565;
+  font-weight: 500;
+  font-size: 16px;
+}
+.menu .menu-items ul li.menu-items-title .separator {
+  width: 40px;
+  height: 3px;
+  margin-bottom: 15px;
+  background-color: #99E2D0;
+}
+.menu .menu-items ul li div.menu-items-infos {
   width: 100%;
   height: auto;
   padding: 10px;
 }
-.menu .menu-entree ul li h3,
-.menu .menu-dishes ul li h3,
-.menu .menu-dessert ul li h3 {
-  max-width: 270px;
+.menu .menu-items ul li h3 {
+  max-width: 310px;
   font-size: 18px;
 }
-.menu .menu-entree ul li div.menu-price,
-.menu .menu-dishes ul li div.menu-price,
-.menu .menu-dessert ul li div.menu-price {
+.menu .menu-items ul li div.menu-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu .menu-entree ul li div.menu-price p,
-.menu .menu-dishes ul li div.menu-price p,
-.menu .menu-dessert ul li div.menu-price p {
+.menu .menu-items ul li div.menu-price p {
   width: 80%;
   color: #656565;
   font-weight: 400;
@@ -474,17 +461,11 @@ footer ul li a {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu .menu-entree ul li div.menu-price p,
-.menu .menu-entree ul li div.menu-price span,
-.menu .menu-dishes ul li div.menu-price p,
-.menu .menu-dishes ul li div.menu-price span,
-.menu .menu-dessert ul li div.menu-price p,
-.menu .menu-dessert ul li div.menu-price span {
+.menu .menu-items ul li div.menu-price p,
+.menu .menu-items ul li div.menu-price span {
   display: block;
 }
-.menu .menu-entree ul li div.add-to-cart,
-.menu .menu-dishes ul li div.add-to-cart,
-.menu .menu-dessert ul li div.add-to-cart {
+.menu .menu-items ul li div.add-to-cart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,9 +477,7 @@ footer ul li a {
   margin-right: -55px;
   transition: all 0.4s;
 }
-.menu .menu-entree ul li div.add-to-cart span,
-.menu .menu-dishes ul li div.add-to-cart span,
-.menu .menu-dessert ul li div.add-to-cart span {
+.menu .menu-items ul li div.add-to-cart span {
   display: inline-block;
   background-color: #FFFFFF;
   height: 20px;
@@ -507,21 +486,15 @@ footer ul li a {
   border-radius: 50%;
   text-align: center;
 }
-.menu .menu-entree ul li div.add-to-cart span i,
-.menu .menu-dishes ul li div.add-to-cart span i,
-.menu .menu-dessert ul li div.add-to-cart span i {
+.menu .menu-items ul li div.add-to-cart span i {
   color: #99E2D0;
   font-size: 12px;
 }
-.menu .menu-entree ul li:hover div.add-to-cart,
-.menu .menu-dishes ul li:hover div.add-to-cart,
-.menu .menu-dessert ul li:hover div.add-to-cart {
+.menu .menu-items ul li:hover div.add-to-cart {
   margin-right: 0;
   transform: translateX(0);
 }
-.menu .menu-entree ul li:hover div.add-to-cart span,
-.menu .menu-dishes ul li:hover div.add-to-cart span,
-.menu .menu-dessert ul li:hover div.add-to-cart span {
+.menu .menu-items ul li:hover div.add-to-cart span {
   transform: rotate(360deg);
   transition: transform 1s;
 }
@@ -529,20 +502,61 @@ footer ul li a {
   margin-bottom: 30px;
 }
 
-.menu ul li:nth-child(1) {
+@media only screen and (min-width: 768px) {
+  .menu-items ul li .menu-items-infos h3 {
+    max-width: 100%;
+  }
+}
+.menu-items ul li:nth-child(1) {
   animation-delay: 0.25s;
 }
 
-.menu ul li:nth-child(2) {
+.menu-items ul li:nth-child(2) {
   animation-delay: 0.5s;
 }
 
-.menu ul li:nth-child(3) {
+.menu-items ul li:nth-child(3) {
   animation-delay: 0.75s;
 }
 
-.menu ul li:nth-child(4) {
+.menu-items ul li:nth-child(4) {
   animation-delay: 1s;
+}
+
+.menu-items ul li:nth-child(5) {
+  animation-delay: 1.25s;
+}
+
+.menu-items ul li:nth-child(6) {
+  animation-delay: 1.5s;
+}
+
+.menu-items ul li:nth-child(7) {
+  animation-delay: 1.75s;
+}
+
+.menu-items ul li:nth-child(8) {
+  animation-delay: 2s;
+}
+
+.menu-items ul li:nth-child(9) {
+  animation-delay: 2.25s;
+}
+
+.menu-items ul li:nth-child(10) {
+  animation-delay: 2.5s;
+}
+
+.menu-items ul li:nth-child(11) {
+  animation-delay: 2.75s;
+}
+
+.menu-items ul li:nth-child(12) {
+  animation-delay: 3s;
+}
+
+.menu-items ul li:nth-child(13) {
+  animation-delay: 3.25s;
 }
 
 @keyframes fadeIn {
@@ -565,10 +579,8 @@ footer ul li a {
   right: 0;
   bottom: 0;
   background: rgba(35, 35, 35, 0.7);
-  animation: close linear forwards;
+  animation: closeLoader linear forwards;
   animation-duration: 2s;
-  backdrop-filter: blur(2.5px);
-  -webkit-backdrop-filter: blur(2.5px);
   z-index: 30;
 }
 .loader .loading-spinner {
@@ -597,15 +609,15 @@ footer ul li a {
     opacity: 0;
   }
 }
-@keyframes close {
+@keyframes closeLoader {
   0% {
-    transform: scale(1);
+    width: 100%;
   }
   99% {
-    transform: scale(1);
+    width: 100%;
   }
   100% {
-    transform: scale(0);
+    width: 0%;
   }
 }
 .menu-img {
@@ -631,8 +643,24 @@ footer ul li a {
   font-family: "Shrikhand", cursive;
   font-size: 25px;
 }
-.menu .menu-header i {
+.menu .menu-header .like {
+  position: relative;
+}
+.menu .menu-header .like i {
+  position: absolute;
+  top: -15px;
+  right: 10px;
   font-size: 30px;
+}
+.menu .menu-header .like i.is-active:hover {
+  font-weight: bold;
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
 }
 .menu button {
   display: block;

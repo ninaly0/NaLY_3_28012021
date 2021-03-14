@@ -20,8 +20,19 @@
       font-family: $title-font;
       font-size: 25px;
     }
-    i {
-      font-size: 30px;
+    .like {
+      position: relative;
+    
+      i {
+        position: absolute;
+        top: -15px;
+        right: 10px;
+        font-size: 30px;
+  
+        &.is-active {
+          @include like;
+        }
+      }
     }
   }
 

@@ -8,10 +8,8 @@
       right: 0;
       bottom: 0;
       background: rgba(35, 35, 35, 0.7);
-      animation: close linear forwards;
+      animation: closeLoader linear forwards;
       animation-duration: 2s;
-      backdrop-filter: blur(2.5px);
-      -webkit-backdrop-filter: blur(2.5px);
       z-index: 30;
     }
   
@@ -43,14 +41,17 @@
     }
   }
   
-  @keyframes close {
+  @keyframes closeLoader {
     0% { 
-      transform: scale(1);
+      width: 100%;
+      //transform: scale(1);
     }
     99% {
-      transform: scale(1);
+      width: 100%;
+      //transform: scale(1);
     }
     100% { 
-      transform: scale(0);
+      width: 0%;
+      //transform: scale(0);
     }
   }
