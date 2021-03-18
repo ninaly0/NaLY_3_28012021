@@ -586,6 +586,8 @@ footer ul li a {
   }
 }
 .loader .overlay {
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
