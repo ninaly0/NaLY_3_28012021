@@ -16,6 +16,13 @@
     border: none;
     background-color: transparent;
     font-weight: 700;
+
+    &::-webkit-input-placeholder {
+      color: black;
+    }
+    &::-moz-placeholder { 
+      color: black;
+    }
   }
 }
 

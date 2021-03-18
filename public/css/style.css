@@ -188,6 +188,12 @@ footer ul li a {
   background-color: transparent;
   font-weight: 700;
 }
+.search-location input::-webkit-input-placeholder {
+  color: black;
+}
+.search-location input::-moz-placeholder {
+  color: black;
+}
 
 .introduction {
   padding: 40px;
@@ -313,10 +319,10 @@ footer ul li a {
     font-size: 18px;
   }
 }
-.restaurant-cards {
+.cards {
   background-color: #f6f6f6;
 }
-.restaurant-cards ul li {
+.cards ul li {
   position: relative;
   margin-bottom: 20px;
   border-radius: 15px;
@@ -324,29 +330,29 @@ footer ul li a {
   -webkit-box-shadow: 0px 11px 20px -15px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 11px 20px -15px rgba(0, 0, 0, 0.3);
 }
-.restaurant-cards ul li img {
+.cards ul li img {
   border-radius: 15px 15px 0 0;
   width: 100%;
   height: 175px;
   object-fit: cover;
   object-position: bottom;
 }
-.restaurant-cards ul li:nth-child(2) img {
+.cards ul li:nth-child(2) img {
   object-position: 0 -150px;
 }
-.restaurant-cards ul li .card-infos {
+.cards ul li .card-infos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 25px 20px 15px;
 }
-.restaurant-cards ul li .card-infos p {
+.cards ul li .card-infos p {
   color: #656565;
 }
-.restaurant-cards ul li .card-infos i {
+.cards ul li .card-infos i {
   font-size: 30px;
 }
-.restaurant-cards ul li .new-tag {
+.cards ul li .new-tag {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -363,7 +369,7 @@ footer ul li a {
 .card-infos .like i {
   position: absolute;
   top: -15px;
-  right: 10px;
+  right: 0;
   font-size: 30px;
 }
 .card-infos .like i.is-active:hover {
@@ -378,37 +384,37 @@ footer ul li a {
 }
 
 @media only screen and (min-width: 768px) {
-  .restaurant-cards ul li figure {
+  .cards ul li figure {
     height: 280px;
   }
-  .restaurant-cards ul li figure img {
+  .cards ul li figure img {
     height: 100%;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .restaurant-cards ul {
+  .cards ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .restaurant-cards ul li {
+  .cards ul li {
     display: block;
     width: calc(50% - 40px / 2);
     height: 350px;
   }
-  .restaurant-cards ul li figure {
+  .cards ul li figure {
     height: 250px;
   }
-  .restaurant-cards ul li figure img {
+  .cards ul li figure img {
     height: 100%;
   }
-  .restaurant-cards ul li figure img:nth-child(2) img {
+  .cards ul li figure img:nth-child(2) img {
     object-position: 0;
   }
-  .restaurant-cards ul li h3 {
+  .cards ul li h3 {
     font-size: 24px;
   }
-  .restaurant-cards ul li p {
+  .cards ul li p {
     font-size: 20px;
   }
 }
@@ -453,12 +459,12 @@ footer ul li a {
   max-width: 310px;
   font-size: 18px;
 }
-.menu .menu-items ul li div.menu-price {
+.menu .menu-items ul li div.menu-items-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu .menu-items ul li div.menu-price p {
+.menu .menu-items ul li div.menu-items-price p {
   width: 80%;
   color: #656565;
   font-weight: 400;
@@ -467,8 +473,8 @@ footer ul li a {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu .menu-items ul li div.menu-price p,
-.menu .menu-items ul li div.menu-price span {
+.menu .menu-items ul li div.menu-items-price p,
+.menu .menu-items ul li div.menu-items-price span {
   display: block;
 }
 .menu .menu-items ul li div.add-to-cart {
@@ -496,14 +502,6 @@ footer ul li a {
   color: #99E2D0;
   font-size: 12px;
 }
-.menu .menu-items ul li:hover div.add-to-cart {
-  margin-right: 0;
-  transform: translateX(0);
-}
-.menu .menu-items ul li:hover div.add-to-cart span {
-  transform: rotate(360deg);
-  transition: transform 1s;
-}
 .menu button.order {
   margin-bottom: 30px;
 }
@@ -511,6 +509,14 @@ footer ul li a {
 @media only screen and (min-width: 768px) {
   .menu-items ul li .menu-items-infos h3 {
     max-width: 100%;
+  }
+  .menu-items ul li:hover div.add-to-cart {
+    margin-right: 0;
+    transform: translateX(0);
+  }
+  .menu-items ul li:hover div.add-to-cart span {
+    transform: rotate(360deg);
+    transition: transform 1s;
   }
 }
 .menu-items ul li:nth-child(1) {
@@ -630,6 +636,7 @@ footer ul li a {
   width: 100%;
   height: 255px;
   object-fit: cover;
+  object-position: center;
 }
 
 .menu {
@@ -655,7 +662,7 @@ footer ul li a {
 .menu .menu-header .like i {
   position: absolute;
   top: -15px;
-  right: 10px;
+  right: 0;
   font-size: 30px;
 }
 .menu .menu-header .like i.is-active:hover {
@@ -689,6 +696,12 @@ footer ul li a {
   box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.6);
   opacity: 0.9;
   transition: 0.2s;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu-img {
+    height: 400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

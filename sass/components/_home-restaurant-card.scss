@@ -1,4 +1,4 @@
-.restaurant-cards {
+.cards {
   background-color: #f6f6f6;
 
   ul li {
@@ -47,7 +47,7 @@
     i {
       position: absolute;
       top: -15px;
-      right: 10px;
+      right: 0;
       font-size: 30px;
 
       &.is-active {
@@ -58,7 +58,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .restaurant-cards {
+  .cards {
     ul li {
       figure {
         height: 280px;
@@ -70,8 +70,9 @@
     }
   }
 }
+
 @media only screen and (min-width: 1024px) {
-  .restaurant-cards {
+  .cards {
     ul {
       display: flex;
       justify-content: space-between;

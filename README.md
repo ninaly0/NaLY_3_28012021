@@ -1,5 +1,11 @@
 # Oh my food
 
+Ohmyfood est une entreprise qui permet de commander des repas en ligne.
+
+Le site se compose de 5 pages en tout:
+* 1 page d'accueil
+* 4 pages de menu
+
 ### Polices
 * __logo et titres__ : Shrikhand
 * __Texte__ : Roboto
