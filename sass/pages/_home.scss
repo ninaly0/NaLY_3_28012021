@@ -68,6 +68,7 @@
         @include steps("3");
       }
     }
+
     .choose-restaurant {
       &::before {
         @include font-icon("\f3cd");

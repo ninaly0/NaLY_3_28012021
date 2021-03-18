@@ -101,6 +101,8 @@
 
 @media only screen and (min-width: 768px) {
   .menu-items ul li {
+    cursor: pointer;
+    
     .menu-items-infos {
       h3 {
         max-width: 100%;
