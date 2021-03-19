@@ -1,11 +1,13 @@
+@import "base/reset";
 @import "utils/variables";
 @import "utils/mixins";
-@import "base/reset";
+
 @import "base/typography";
 @import "layouts/header";
 @import "layouts/footer";
-@import "pages/home";
+
 @import "components/home-restaurant-card";
 @import "components/menu-list-card";
 @import "components/loader";
+@import "pages/home";
 @import "pages/menus";
