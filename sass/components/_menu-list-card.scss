@@ -13,7 +13,6 @@
         border-radius: 20px;
         background-color: $color-white;
         margin-bottom: 15px;
-        -webkit-box-shadow: 0px 11px 20px -15px rgba(0,0,0,0.3); 
         box-shadow: 0px 11px 20px -15px rgba(0,0,0,0.3);
         overflow: hidden;
       }
@@ -102,7 +101,7 @@
 @media only screen and (min-width: 768px) {
   .menu-items ul li {
     cursor: pointer;
-    
+
     .menu-items-infos {
       h3 {
         max-width: 100%;
